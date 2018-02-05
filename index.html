@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Морской бой</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js.js"></script>
+</head>
+<body>
+<div id="header">
+    <h1 id="gameName">Морской бой</h1>
+    <button id="reload">Новая игра</button>
+</div>
+<div id="allcontent">
+    <div id="main">
+        <section id="computerBoard">
+            <table class="information">
+                <tbody>
+                    <tr><td></td></tr><tr><td>А</td></tr><tr><td>Б</td></tr>
+                    <tr><td>В</td></tr><tr><td>Г</td></tr><tr><td>Д</td></tr>
+                    <tr><td>Е</td></tr><tr><td>Ж</td></tr><tr><td>З</td></tr>
+                    <tr><td>И</td></tr><tr><td>К</td></tr>
+                </tbody>
+            </table>
+            <table id="computer">
+                <caption contenteditable="true" title="Введите имя компьютера">Компьютер</caption>
+                <tbody>
+                <tr class="numbers">
+                    <th>1</th><th>2</th><th>3</th><th>4</th><th>5</th>
+                    <th>6</th><th>7</th><th>8</th><th>9</th><th>10</th>
+                </tr>
+                <tr>
+                    <td x="0" y="0"></td><td x="0" y="1"></td><td x="0" y="2"></td>
+                    <td x="0" y="3"></td><td x="0" y="4"></td><td x="0" y="5"></td>
+                    <td x="0" y="6"></td><td x="0" y="7"></td>
+                    <td x="0" y="8"></td><td x="0" y="9"></td>
+                </tr>
+                <tr>
+                    <td x="1" y="0"></td><td x="1" y="1"></td><td x="1" y="2"></td>
+                    <td x="1" y="3"></td><td x="1" y="4"></td><td x="1" y="5"></td>
+                    <td x="1" y="6"></td><td x="1" y="7"></td><td x="1" y="8"></td>
+                    <td x="1" y="9"></td>
+                </tr>
+                <tr>
+                    <td x="2" y="0"></td><td x="2" y="1"></td><td x="2" y="2"></td>
+                    <td x="2" y="3"></td><td x="2" y="4"></td><td x="2" y="5"></td>
+                    <td x="2" y="6"></td><td x="2" y="7"></td><td x="2" y="8"></td>
+                    <td x="2" y="9"></td>
+                </tr>
+                <tr>
+                    <td x="3" y="0"></td><td x="3" y="1"></td><td x="3" y="2"></td>
+                    <td x="3" y="3"></td><td x="3" y="4"></td><td x="3" y="5"></td>
+                    <td x="3" y="6"></td><td x="3" y="7"></td><td x="3" y="8"></td>
+                    <td x="3" y="9"></td>
+                </tr>
+                <tr>
+                    <td x="4" y="0"></td><td x="4" y="1"></td><td x="4" y="2"></td>
+                    <td x="4" y="3"></td><td x="4" y="4"></td><td x="4" y="5"></td>
+                    <td x="4" y="6"></td><td x="4" y="7"></td><td x="4" y="8"></td>
+                    <td x="4" y="9"></td>
+                </tr>
+                <tr>
+                    <td x="5" y="0"></td><td x="5" y="1"></td><td x="5" y="2"></td>
+                    <td x="5" y="3"></td><td x="5" y="4"></td><td x="5" y="5"></td>
+                    <td x="5" y="6"></td><td x="5" y="7"></td><td x="5" y="8"></td>
+                    <td x="5" y="9"></td>
+                </tr>
+                <tr>
+                    <td x="6" y="0"></td><td x="6" y="1"></td><td x="6" y="2"></td>
+                    <td x="6" y="3"></td><td x="6" y="4"></td><td x="6" y="5"></td>
+                    <td x="6" y="6"></td><td x="6" y="7"></td><td x="6" y="8"></td>
+                    <td x="6" y="9"></td>
+                </tr>
+                <tr>
+                    <td x="7" y="0"></td><td x="7" y="1"></td><td x="7" y="2"></td>
+                    <td x="7" y="3"></td><td x="7" y="4"></td><td x="7" y="5"></td>
+                    <td x="7" y="6"></td><td x="7" y="7"></td><td x="7" y="8"></td>
+                    <td x="7" y="9"></td>
+                </tr>
+                <tr>
+                    <td x="8" y="0"></td><td x="8" y="1"></td><td x="8" y="2"></td>
+                    <td x="8" y="3"></td><td x="8" y="4"></td><td x="8" y="5"></td>
+                    <td x="8" y="6"></td><td x="8" y="7"></td><td x="8" y="8"></td>
+                    <td x="8" y="9"></td>
+                </tr>
+                <tr>
+                    <td x="9" y="0"></td><td x="9" y="1"></td><td x="9" y="2"></td>
+                    <td x="9" y="3"></td><td x="9" y="4"></td><td x="9" y="5"></td>
+                    <td x="9" y="6"></td><td x="9" y="7"></td><td x="9" y="8"></td>
+                    <td x="9" y="9"></td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+        <section id="playerBoard">
+            <table class="information">
+                <tbody>
+                <tr><td></td></tr><tr><td>А</td></tr><tr><td>Б</td></tr>
+                <tr><td>В</td></tr><tr><td>Г</td></tr><tr><td>Д</td></tr>
+                <tr><td>Е</td></tr><tr><td>Ж</td></tr><tr><td>З</td></tr>
+                <tr><td>И</td></tr><tr><td>К</td></tr>
+                </tbody>
+            </table>
+            <table id="player">
+                <caption contenteditable="true" title="Введите свое имя">Игрок</caption>
+                <tbody>
+                <tr>
+                    <th>1</th><th>2</th><th>3</th><th>4</th><th>5</th>
+                    <th>6</th><th>7</th><th>8</th><th>9</th><th>10</th>
+                </tr>
+                <tr>
+                    <td x="0" y="0"></td><td x="0" y="1"></td><td x="0" y="2"></td>
+                    <td x="0" y="3"></td><td x="0" y="4"></td><td x="0" y="5"></td>
+                    <td x="0" y="6"></td><td x="0" y="7"></td><td x="0" y="8"></td>
+                    <td x="0" y="9"></td>
+                </tr>
+                <tr>
+                    <td x="1" y="0"></td><td x="1" y="1"></td><td x="1" y="2"></td>
+                    <td x="1" y="3"></td><td x="1" y="4"></td><td x="1" y="5"></td>
+                    <td x="1" y="6"></td><td x="1" y="7"></td><td x="1" y="8"></td>
+                    <td x="1" y="9"></td>
+                </tr>
+                <tr>
+                    <td x="2" y="0"></td><td x="2" y="1"></td><td x="2" y="2"></td>
+                    <td x="2" y="3"></td><td x="2" y="4"></td><td x="2" y="5"></td>
+                    <td x="2" y="6"></td><td x="2" y="7"></td><td x="2" y="8"></td>
+                    <td x="2" y="9"></td>
+                </tr>
+                <tr>
+                    <td x="3" y="0"></td><td x="3" y="1"></td><td x="3" y="2"></td>
+                    <td x="3" y="3"></td><td x="3" y="4"></td><td x="3" y="5"></td>
+                    <td x="3" y="6"></td><td x="3" y="7"></td><td x="3" y="8"></td>
+                    <td x="3" y="9"></td>
+                </tr>
+                <tr>
+                    <td x="4" y="0"></td><td x="4" y="1"></td><td x="4" y="2"></td>
+                    <td x="4" y="3"></td><td x="4" y="4"></td><td x="4" y="5"></td>
+                    <td x="4" y="6"></td><td x="4" y="7"></td><td x="4" y="8"></td>
+                    <td x="4" y="9"></td>
+                </tr>
+                <tr>
+                    <td x="5" y="0"></td><td x="5" y="1"></td><td x="5" y="2"></td>
+                    <td x="5" y="3"></td><td x="5" y="4"></td><td x="5" y="5"></td>
+                    <td x="5" y="6"></td><td x="5" y="7"></td><td x="5" y="8"></td>
+                    <td x="5" y="9"></td>
+                </tr>
+                <tr>
+                    <td x="6" y="0"></td><td x="6" y="1"></td><td x="6" y="2"></td>
+                    <td x="6" y="3"></td><td x="6" y="4"></td><td x="6" y="5"></td>
+                    <td x="6" y="6"></td><td x="6" y="7"></td><td x="6" y="8"></td>
+                    <td x="6" y="9"></td>
+                </tr>
+                <tr>
+                    <td x="7" y="0"></td><td x="7" y="1"></td><td x="7" y="2"></td>
+                    <td x="7" y="3"></td><td x="7" y="4"></td><td x="7" y="5"></td>
+                    <td x="7" y="6"></td><td x="7" y="7"></td><td x="7" y="8"></td>
+                    <td x="7" y="9"></td>
+                </tr>
+                <tr>
+                    <td x="8" y="0"></td><td x="8" y="1"></td><td x="8" y="2"></td>
+                    <td x="8" y="3"></td><td x="8" y="4"></td><td x="8" y="5"></td>
+                    <td x="8" y="6"></td><td x="8" y="7"></td><td x="8" y="8"></td>
+                    <td x="8" y="9"></td>
+                </tr>
+                <tr>
+                    <td x="9" y="0"></td><td x="9" y="1"></td><td x="9" y="2"></td>
+                    <td x="9" y="3"></td><td x="9" y="4"></td><td x="9" y="5"></td>
+                    <td x="9" y="6"></td><td x="9" y="7"></td><td x="9" y="8"></td>
+                    <td x="9" y="9"></td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+    <footer>
+        <h2 id="gameOver"></h2>
+    </footer>
+</div>
+</body>
+</html>

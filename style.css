@@ -1,0 +1,156 @@
+@charset "utf-8";
+
+body {
+    background-color: white;
+    font-family:      Calibri, bold;
+}
+
+/*область с полями игроков*/
+#main {
+    display:         flex;
+    justify-content: space-around;
+    margin-top:      20px;
+}
+
+table {
+    border-collapse: collapse;
+    color:           #313e78;
+    font-size:       18px;
+    font-weight:     200;
+}
+
+/*колонки букв*/
+table.information td {
+    border:     1px solid white;
+}
+
+td {
+    border:     1px solid #cccccc;
+    position:   relative;
+    text-align: center;
+    width:      35px;
+    height:     35px;
+}
+
+th {
+    width:       35px;
+    height:      35px;
+    color:       #313e78;
+    font-size:   18px;
+    font-weight: 200;
+}
+
+/*прицел*/
+table#computer td:hover {
+    background: #CADFEE;
+    cursor:     crosshair;
+    opacity:    0.5;
+}
+
+/*корабль ранен*/
+.hit {
+    background-color: #FFCC66;
+    border:           none;
+}
+
+/*корабль потоплен*/
+.sunk {
+    background-color: #EF463A;
+    border:           none;
+}
+
+/*промах*/
+.miss:before {
+    content:       ' \25CF';
+    font-size:     10px;
+    align-content: center;
+}
+
+/*корабль игрока*/
+.ship {
+    background-color: #587AB0;
+    border:           none;
+}
+
+#allcontent {
+    width:            900px;
+    background-color: white;
+    margin-left:      auto;
+    margin-right:     auto;
+}
+
+#computerBoard, #playerBoard {
+    display: inline-flex;
+}
+
+#computerBoard {
+    margin-left: -15px;
+}
+
+#playerBoard {
+    margin-right: 15px;
+}
+
+#header {
+    background-color: #6d8db0;
+    width:            900px;
+    height:           100px;
+    margin-left:      auto;
+    margin-right:     auto;
+    display:          flex;
+}
+
+/*подписи внизу страницы*/
+footer {
+    border:      none;
+    width:       900px;
+    height:      50px;
+    font-size:   15px;
+    font-weight: 700;
+    display:     flex;
+}
+
+/*окончание игры*/
+#gameOver {
+    color:        #587ab0;
+    margin-left:  auto;
+    margin-right: auto;
+}
+
+/*подпись компьютера и игрока*/
+caption {
+    color:        #313e78;
+    caption-side: bottom;
+    font-size: 20px;
+}
+
+/*текст морской бой*/
+#gameName {
+    margin-left: 55px;
+    margin-top:  30px;
+    color:       white;
+}
+
+/*кнопка новая игра*/
+button#reload {
+    display:       inline-flex;
+    padding:       10px 15px 10px 15px;
+    margin-left:   510px;
+    margin-top:    30px;
+    margin-bottom: 30px;
+    font-weight:   600;
+    background:    #f2f2f2;
+    color:         #587abf;
+    font-family:   Calibri, bold;
+    font-size:     15px;
+    border:        none;
+}
+
+button#reload:hover {
+    background:    white;
+}
+
+
+
+
+
